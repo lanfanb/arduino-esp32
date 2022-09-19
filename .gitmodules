@@ -1,0 +1,12 @@
+[submodule "libraries/InfluxDB"]
+	path = libraries/InfluxDB
+	url = https://github.com/tobiasschuerg/InfluxDB-Client-for-Arduino.git
+[submodule "libraries/BME680"]
+	path = libraries/BME680
+	url = https://github.com/Zanduino/BME680.git
+[submodule "libraries/HASS"]
+	path = libraries/HASS
+	url = https://github.com/dawidchyrzynski/arduino-home-assistant.git
+[submodule "libraries/PubSubClient"]
+	path = libraries/PubSubClient
+	url = https://github.com/knolleary/pubsubclient.git

@@ -46,7 +46,6 @@ set(CORE_SRCS
   cores/esp32/esp32-hal-touch.c
   cores/esp32/esp32-hal-uart.c
   cores/esp32/esp32-hal-rmt.c
-  cores/esp32/Esp.cpp
   cores/esp32/FunctionalInterrupt.cpp
   cores/esp32/HardwareSerial.cpp
   cores/esp32/IPAddress.cpp
@@ -118,9 +117,6 @@ set(LIBRARY_SRCS
   libraries/USB/src/USBHIDSystemControl.cpp
   libraries/USB/src/USBHIDVendor.cpp
   libraries/USB/src/USBVendor.cpp
-  libraries/WebServer/src/WebServer.cpp
-  libraries/WebServer/src/Parsing.cpp
-  libraries/WebServer/src/detail/mimetable.cpp
   libraries/WiFiClientSecure/src/ssl_client.cpp
   libraries/WiFiClientSecure/src/WiFiClientSecure.cpp
   libraries/WiFi/src/WiFiAP.cpp
@@ -134,6 +130,47 @@ set(LIBRARY_SRCS
   libraries/WiFi/src/WiFiUdp.cpp
   libraries/WiFiProv/src/WiFiProv.cpp
   libraries/Wire/src/Wire.cpp
+  libraries/InfluxDB/src/BucketsClient.cpp
+  libraries/InfluxDB/src/HTTPService.cpp
+  libraries/InfluxDB/src/InfluxData.cpp
+  libraries/InfluxDB/src/InfluxDbClient.cpp
+  libraries/InfluxDB/src/InfluxDb.cpp
+  libraries/InfluxDB/src/Options.cpp
+  libraries/InfluxDB/src/Point.cpp
+  libraries/InfluxDB/src/query/CsvReader.cpp
+  libraries/InfluxDB/src/query/FluxParser.cpp
+  libraries/InfluxDB/src/query/FluxTypes.cpp
+  libraries/InfluxDB/src/query/HttpStreamScanner.cpp
+  libraries/InfluxDB/src/query/Params.cpp
+  libraries/InfluxDB/src/util/helpers.cpp
+  libraries/BME680/src/Zanshin_BME680.cpp
+  libraries/HASS/src/HADevice.cpp
+  libraries/HASS/src/HAMqtt.cpp
+  libraries/HASS/src/device-types/HABaseDeviceType.cpp
+  libraries/HASS/src/device-types/HABinarySensor.cpp
+  libraries/HASS/src/device-types/HAButton.cpp
+  libraries/HASS/src/device-types/HACamera.cpp
+  libraries/HASS/src/device-types/HACover.cpp
+  libraries/HASS/src/device-types/HADeviceTracker.cpp
+  libraries/HASS/src/device-types/HADeviceTrigger.cpp
+  libraries/HASS/src/device-types/HAFan.cpp
+  libraries/HASS/src/device-types/HAHVAC.cpp
+  libraries/HASS/src/device-types/HALight.cpp
+  libraries/HASS/src/device-types/HALock.cpp
+  libraries/HASS/src/device-types/HANumber.cpp
+  libraries/HASS/src/device-types/HAScene.cpp
+  libraries/HASS/src/device-types/HASelect.cpp
+  libraries/HASS/src/device-types/HASensor.cpp
+  libraries/HASS/src/device-types/HASensorNumber.cpp
+  libraries/HASS/src/device-types/HASwitch.cpp
+  libraries/HASS/src/device-types/HATagScanner.cpp
+  libraries/HASS/src/mocks/PubSubClientMock.cpp
+  libraries/HASS/src/utils/HADictionary.cpp
+  libraries/HASS/src/utils/HANumeric.cpp
+  libraries/HASS/src/utils/HASerializer.cpp
+  libraries/HASS/src/utils/HASerializerArray.cpp
+  libraries/HASS/src/utils/HAUtils.cpp
+  libraries/PubSubClient/src/PubSubClient.cpp
   )
 
 set(BLE_SRCS
@@ -198,11 +235,19 @@ set(includedirs
   libraries/Ticker/src
   libraries/Update/src
   libraries/USB/src
-  libraries/WebServer/src
   libraries/WiFiClientSecure/src
   libraries/WiFi/src
   libraries/WiFiProv/src
   libraries/Wire/src
+  libraries/InfluxDB/src
+  libraries/InfluxDB/src/query
+  libraries/InfluxDB/src/util
+  libraries/BME680/src
+  libraries/HASS/src
+  libraries/HASS/src/device-types
+  libraries/HASS/src/mocks
+  libraries/HASS/src/utils
+  libraries/PubSubClient/src
   )
 
 set(srcs ${CORE_SRCS} ${LIBRARY_SRCS} ${BLE_SRCS})
